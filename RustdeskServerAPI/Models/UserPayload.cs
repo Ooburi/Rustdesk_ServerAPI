@@ -2,13 +2,13 @@
 {
     public class UserPayload
     {
-        string Name { get; set; }
-        string Email { get; set; }
-        string Note { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Note { get; set; }
         /// <summary>
         /// 1 - normal, -1 - unverified, 0 - disabled
         /// </summary>
-        byte Status { get; set; } 
-        bool isAdmin { get; set; }
+        public int Status { get; set; }
+        public bool isAdmin { get; set; }
     }
 }

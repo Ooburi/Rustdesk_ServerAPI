@@ -2,13 +2,13 @@
 {
     public class LoginRequest
     {
-        string? username { get; set; }
-        string? password { get; set; }
-        string? id { get; set; }
-        string? uuid { get; set; }
-        bool? autoLogin { get; set; }
-        string? type { get; set; }
-        string? verificationCode { get; set; }
-        string? tfaCode { get; set; }
+        public string? Username { get; set; }
+        public string? Password { get; set; }
+        public string? Id { get; set; }
+        public string? Uuid { get; set; }
+        public bool? AutoLogin { get; set; }
+        public string? Type { get; set; }
+        public string? VerificationCode { get; set; }
+        public string? TfaCode { get; set; }
     }
 }
