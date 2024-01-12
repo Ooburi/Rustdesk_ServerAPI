@@ -25,7 +25,7 @@ namespace RustdeskServerAPI.Controllers
         [HttpPost(Name = "currentUser")]
         public async Task<UserPayload> CurrentUser()
         {
-            var headers = HttpContext.Request.Headers.Authorization;
+            string headers = HttpContext.Request.Headers.Authorization;
 
             var user = new UserPayload()
             {
@@ -36,7 +36,7 @@ namespace RustdeskServerAPI.Controllers
                 Status = -1
             };
 
-            var _user = await _context.Users.FirstOrDefaultAsync(u => u.Token == headers);
+            var _user = await _context.Users.FirstOrDefaultAsync(u => u.Token == headers.Substring(7));
             if (_user != null)
             {
                 user.Email = _user.Email;
@@ -57,7 +57,7 @@ namespace RustdeskServerAPI.Controllers
         [HttpPost(Name = "login")]
         public async Task<LoginResponse> Login([FromBody] LoginRequest request)
         {
-            string token = "Bearer "+ Guid.NewGuid().ToString();
+            string token = Guid.NewGuid().ToString();
             var response = new LoginResponse()
             {
                 access_token = "",

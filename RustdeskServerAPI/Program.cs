@@ -20,10 +20,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.Use(async (context, next) =>
 {
-    var response = context.Request;
+    //var response = context.Request;
     await next.Invoke();
     
 });

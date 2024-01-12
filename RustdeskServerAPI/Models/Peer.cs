@@ -3,20 +3,20 @@
 namespace RustdeskServerAPI.Models
 {
     public class Peer
-    {
+    {        
         [Key]
         public int PeerId { get; set; }
-        public string Id { get; set; }
-        public string Hash { get; set; }
-        public string Username { get; set; }
-        public string Hostname { get; set; }
-        public string Platform { get; set; }
-        public string Alias { get; set; }
-        public string[] Tags { get; set; }
-        public bool ForceAlwaysRelay { get; set; }
-        public string RdpPort { get; set; }
-        public string RdpUsername { get; set; }
-        public bool Online { get; set; } = false;
-        public string LoginName { get; set; }
+        public string? id { get; set; }
+        public string? hash { get; set; }
+        public string? username { get; set; }
+        public string? hostname { get; set; }
+        public string? platform { get; set; }
+        public string? alias { get; set; }
+        public string[]? tags { get; set; }
+        public bool? forceAlwaysRelay { get; set; }
+        public string? rdpPort { get; set; }
+        public string? rdpUsername { get; set; }
+        public bool? online { get; set; } = true;
+        public string? loginName { get; set; }
     }
 }
