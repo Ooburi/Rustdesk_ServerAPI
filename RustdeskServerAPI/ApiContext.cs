@@ -23,8 +23,8 @@ namespace RustdeskServerAPI
                     new User { 
                         Id = 1,
                         UserId = "",
-                        Name = "Admin Adminovich",
-                        Email="some.email@.mail.com",
+                        Name = "Admin",
+                        Email="admin@admin.com",
                         isAdmin = true,
                         Login = "Admin",
                         Password = string.Concat(new SHA1Managed().ComputeHash(Encoding.UTF8.GetBytes("1")).Select(b=>b.ToString("X2"))),
